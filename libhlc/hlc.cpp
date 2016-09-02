@@ -191,7 +191,7 @@ namespace libHLC
         // supported.
         initializeCodeGenPreparePass(Registry);
         initializeAtomicExpandPass(Registry);
-        initializeRewriteSymbolsPass(Registry);
+        initializeRewriteSymbolsLegacyPassPass(Registry);
         initializeWinEHPreparePass(Registry);
         initializeDwarfEHPreparePass(Registry);
         initializeSafeStackPass(Registry);
@@ -205,7 +205,7 @@ namespace libHLC
         initializeCodeGen(Registry);
         initializeLoopStrengthReducePass(Registry);
         initializeLowerIntrinsicsPass(Registry);
-        initializeUnreachableBlockElimPass(Registry);
+        initializeUnreachableBlockElimLegacyPassPass(Registry);
 
     }
 
@@ -261,7 +261,7 @@ namespace libHLC
         }
         else
         {
-            Builder.Inliner = createAlwaysInlinerPass();
+            Builder.Inliner = createAlwaysInlinerLegacyPass();
         }
         Builder.DisableUnitAtATime = !UnitAtATime;
         Builder.DisableUnrollLoops = OptLevel == 0;
