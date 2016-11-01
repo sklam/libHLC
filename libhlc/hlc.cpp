@@ -663,7 +663,7 @@ extern "C" {
 
     void HLC_SetCommandLineOption(int argc, const char * const * argv)
     {
-        llvm::cl::ParseCommandLineOptions(argc, argv, nullptr);
+        llvm::cl::ParseCommandLineOptions(argc, argv, "");
     }
 
 } // end extern "C"

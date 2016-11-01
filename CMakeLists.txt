@@ -51,8 +51,8 @@ include_directories(${LLVM_INCLUDE_DIRS})
 add_definitions(${LLVM_DEFINITIONS})
 
 # google test
-add_subdirectory(external/gtest_1.7.0)
-include_directories(${gtest_SOURCE_DIR}/include)
+#add_subdirectory(external/gtest_1.7.0)
+include_directories(external/gtest_1.7.0/include)
 
 # turn on testing
 enable_testing()
